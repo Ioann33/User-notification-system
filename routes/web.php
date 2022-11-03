@@ -23,7 +23,7 @@ Route::get('/dashboard', function () {
 
 Route::group(['middleware'=>'auth'], function (){
     Route::get('/notifyUser', [\App\Http\Controllers\NotificationController::class, 'index'])->name('notify.user');
-    Route::post('/sendMessage', [\App\Http\Controllers\NotificationController::class, 'sendMessage'])->name('send.message');
+    Route::post('/sendMessage', [\App\Http\Controllers\NotificationController::class, 'send'])->name('send.message');
     Route::get('/delNote', [\App\Http\Controllers\NotificationController::class, 'delete'])->name('del.note');
 });
 

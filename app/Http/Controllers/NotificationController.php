@@ -24,7 +24,7 @@ class NotificationController extends Controller
 
         return view('dashboard2',['notifTypes'=>$resArr]);
     }
-    public function sendMessage(Request $request){
+    public function send(Request $request){
         $this->validate($request, [
             'type' =>'required|string',
             'title' => 'required',
